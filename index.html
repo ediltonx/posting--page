@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posting Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Posting Page</h1>
+    </header>
+
+    <main>
+      <section class="form-section">
+        <h2>Criar Post</h2>
+        <form id="post-form">
+          <div class="field">
+            <label for="titulo">Título</label>
+            <input
+              type="text"
+              id="titulo"
+              name="titulo"
+              placeholder="Digite o título do post"
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="conteudo">Conteúdo</label>
+            <textarea
+              id="conteudo"
+              name="conteudo"
+              rows="5"
+              placeholder="Escreva o conteúdo do post"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Postar</button>
+          <p id="error-message" class="hidden error-message"></p>
+        </form>
+      </section>
+
+      <section class="output-section">
+        <h2>Post Publicado</h2>
+        <article id="post-result" class="hidden">
+          <h3 id="renderizador-titulo"></h3>
+          <p id="renderizador-conteudo"></p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Posting Page &copy; 2024</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
