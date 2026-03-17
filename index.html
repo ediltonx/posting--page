@@ -7,50 +7,58 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>Posting Page</h1>
+    <header class="nav">
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#criar-post">Criar Post</a></li>
+          <li><a href="#post-publicado">Post Publicado</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-      <section class="form-section">
+      <section id="criar-post" class="section form-section">
         <h2>Criar Post</h2>
-        <form id="post-form">
-          <div class="field">
-            <label for="titulo">Título</label>
-            <input
-              type="text"
-              id="titulo"
-              name="titulo"
-              placeholder="Digite o título do post"
-              required
-            />
-          </div>
-          <div class="field">
-            <label for="conteudo">Conteúdo</label>
-            <textarea
-              id="conteudo"
-              name="conteudo"
-              rows="5"
-              placeholder="Escreva o conteúdo do post"
-              required
-            ></textarea>
-          </div>
-          <button type="submit">Postar</button>
-          <p id="error-message" class="hidden error-message"></p>
-        </form>
+        <div class="content posting-content">
+          <form id="post-form">
+            <div class="field">
+              <label for="titulo">Título</label>
+              <input
+                type="text"
+                id="titulo"
+                name="titulo"
+                placeholder="Digite o título do post"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="conteudo">Conteúdo</label>
+              <textarea
+                id="conteudo"
+                name="conteudo"
+                rows="5"
+                placeholder="Escreva o conteúdo do post"
+                required
+              ></textarea>
+            </div>
+            <button type="submit">Postar</button>
+            <p id="error-message" class="hidden error-message"></p>
+          </form>
+          <p>
+            Preencha o formulário para simular a criação de um post. O conteúdo
+            enviado será renderizado abaixo após a resposta da API.
+          </p>
+        </div>
       </section>
 
-      <section class="output-section">
+      <section id="post-publicado" class="section section-alt output-section">
         <h2>Post Publicado</h2>
-        <article id="post-result" class="hidden">
-          <h3 id="renderizador-titulo"></h3>
-          <p id="renderizador-conteudo"></p>
-        </article>
+        <div id="posts-list" class="hidden posts-list"></div>
       </section>
     </main>
 
-    <footer>
-      <p>Posting Page &copy; 2024</p>
+    <footer class="footer">
+      <p>Posting Page &copy; 2026 - Todos os direitos reservados.</p>
     </footer>
 
     <script src="main.js"></script>
